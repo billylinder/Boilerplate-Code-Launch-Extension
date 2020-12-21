@@ -1,29 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Extension Configuration</title>
-  </head>
-  <body>
-    Extension Configuration Template
+	<head>
+		<meta charset="UTF-8" />
+		<title>Boilerplate Code Extension</title>
+		<script src="https://unpkg.com/jshint@2.9.6/dist/jshint.js"></script>
+		<script src="lib/codemirror.js"></script>
+		<script src="mode/javascript/javascript.js"></script>
+		<script src="addon/lint/lint.js"></script>
+		<script src="addon/lint/javascript-lint.js"></script>
+		<link rel="stylesheet" href="lib/codemirror.css" />
+		<link rel="stylesheet" href="addon/lint/lint.css" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+			}
+		</style>
+	</head>
 
-    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
-    <script>
-      window.extensionBridge.register({
-        init: function(info) {
-          if (info.settings) {
-            // TODO Populate form values from persisted settings.
-          }
-        },
+	<body>
+		<textarea id="boilerplate"></textarea>
+		<script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+		<script>
+			var textArea = document.getElementById("boilerplate");
+			var editor = CodeMirror.fromTextArea(textArea, {
+				lineNumbers: true,
+				mode: "javascript",
+				gutters: ["CodeMirror-lint-markers"],
+				lint: true,
+			});
 
-        getSettings: function() {
-          // TODO Return settings object from form values.
-        },
+			document
+				.querySelector(".CodeMirror")
+				.setAttribute("style", "height: 100%");
 
-        validate: function() {
-          // TODO Return whether settings are valid.
-        }
-      });
-    </script>
-  </body>
+			window.extensionBridge.register({
+				init: function (info) {
+					if (info.settings) {
+						// TODO Populate form values from persisted settings.
+					}
+				},
+
+				getSettings: function () {
+					// TODO Return settings object from form values.
+				},
+
+				validate: function () {
+					// TODO Return whether settings are valid.
+				},
+			});
+		</script>
+	</body>
 </html>

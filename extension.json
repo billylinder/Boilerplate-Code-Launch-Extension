@@ -1,32 +1,32 @@
 {
-  "displayName": "Boilerplate Code",
-  "name": "boilerplate-code",
-  "platform": "web",
-  "version": "1.0.0",
-  "description": "Easily manage and implement boilerplate code in Adobe Launch rules.",
-  "author": {
-    "name": "Billy Linder"
-  },
-  "viewBasePath": "src/view/",
-  "configuration": {
-    "viewPath": "configuration/configuration.html",
-    "schema": {
-      "$schema": "http://json-schema.org/draft-04/schema#",
-      "type": "object",
-      "properties": {}
-    }
-  },
-  "actions": [
-    {
-      "displayName": "Load Boilerplate Code",
-      "name": "load-boilerplate-code",
-      "schema": {
-        "$schema": "http://json-schema.org/draft-04/schema#",
-        "type": "object",
-        "properties": {}
-      },
-      "libPath": "src/lib/actions/loadBoilerplateCode.js"
-    }
-  ],
-  "iconPath": "./icon/hotplate.svg"
+    "displayName": "Boilerplate Code",
+    "name": "boilerplate-code",
+    "platform": "web",
+    "version": "1.0.0",
+    "description": "Easily manage and implement boilerplate code in Adobe Launch rules.",
+    "author": {
+        "name": "Billy Linder"
+    },
+    "viewBasePath": "src/view/",
+    "configuration": {
+        "viewPath": "configuration/configuration.html",
+        "schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "actions": [
+        {
+            "displayName": "Load Boilerplate Code",
+            "name": "load-boilerplate-code",
+            "schema": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "properties": {}
+            },
+            "libPath": "src/lib/actions/loadBoilerplateCode.js"
+        }
+    ],
+    "iconPath": "./icon/hotplate.svg"
 }
